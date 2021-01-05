@@ -1,6 +1,6 @@
 {% set name = "cwlformat" %}
-{% set version = "2020.05.19" %}
-{% set sha256 = "095791f0909d8df3a31bd2cd377282b807fb9109b8cc487d61b44e647670e952" %}
+{% set version = "2021.01.05" %}
+{% set sha256 = "dbcf563a56099924338eced7e58617663dab4086d33e3ae54ebc529d719737c0" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - cwl-format=cwlformat.formatter:main
     - cwl-explode=cwlformat.explode:main
