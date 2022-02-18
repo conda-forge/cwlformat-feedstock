@@ -1,6 +1,6 @@
 {% set name = "cwlformat" %}
-{% set version = "2021.01.05" %}
-{% set sha256 = "dbcf563a56099924338eced7e58617663dab4086d33e3ae54ebc529d719737c0" %}
+{% set version = "2022.02.18" %}
+{% set sha256 = "05800a7766f8fceef55c513952ddc1516e4d378e752f487c50379c923b930539" %}
 
 package:
   name: {{ name|lower }}
