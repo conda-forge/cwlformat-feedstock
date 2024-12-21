@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - cwl-format=cwlformat.formatter:main
@@ -20,13 +20,15 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - ruamel.yaml
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - cwlformat
     - cwlformat.formatter
